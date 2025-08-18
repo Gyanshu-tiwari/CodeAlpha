@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="player" id="player">
+            <div class="cover">
+                <img src="https://source.unsplash.com/random/600x600/?music,album" alt="Album Cover" id="cover">
+                <div class="loop-indicator song-loop">
+                    <i class="fas fa-redo"></i> Song Loop
+                </div>
+                <div class="loop-indicator playlist-loop">
+                    <i class="fas fa-infinity"></i> Playlist Loop
+                </div>
+                <div class="loading-spinner"></div>
+            </div>
+            
+            <div class="song-info">
+                <h2 id="song-title">Sunset Dreams</h2>
+                <p id="song-artist">Chill Vibes</p>
+            </div>
+            
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+            
+            <div class="time-info">
+                <span class="current-time" id="current-time">0:00</span>
+                <span class="duration" id="duration">0:00</span>
+            </div>
+            
+            <div class="controls">
+                <button class="loop-btn" id="song-loop-btn" title="Loop Song">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button class="prev-btn" id="prev-btn" title="Previous">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="play-btn" id="play-btn" title="Play/Pause">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="next-btn" id="next-btn" title="Next">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                <button class="loop-btn" id="playlist-loop-btn" title="Loop Playlist">
+                    <i class="fas fa-infinity"></i>
+                </button>
+            </div>
+            
+            <div class="volume-container">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.01" value="0.7">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+        
+        <div class="playlist">
+            <div class="playlist-header">
+                <h3>Playlist</h3>
+                <button class="loop-playlist-btn" id="playlist-loop-btn-2" title="Loop Playlist">
+                    <i class="fas fa-infinity"></i>
+                </button>
+            </div>
+            <div class="playlist-container" id="playlist-container">
+                <!-- Playlist items will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
