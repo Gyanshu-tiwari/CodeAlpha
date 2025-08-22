@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #2c3e50, #4a69bd);
+  padding: 20px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 360px;
+  background: rgba(25, 25, 25, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.display {
+  padding: 30px 20px 10px;
+  background: #1a1a1a;
+  text-align: right;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
+}
+
+.expression {
+  color: #fff;
+  font-size: 2.5rem; 
+  min-height: 2.5rem;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none; 
+  transition: font-size 0.3s ease, opacity 0.3s ease;
+}
+
+.expression::-webkit-scrollbar {
+  display: none; 
+}
+
+.result {
+  color: #888;
+  font-size: 1.5rem;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: font-size 0.3s ease;
+}
+
+
+.display.final .expression {
+  font-size: 1.2rem; 
+  opacity: 0.6; 
+}
+
+.display.final .result {
+  font-size: 3rem; 
+  color: white;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+  background: #1e1e1e;
+}
+
+button {
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #333;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.operator {
+  background: #ff9500;
+  color: white;
+  font-size: 1.8rem;
+}
+.operator:hover{
+    background: #fab75aff;
+}
+
+.function {
+  background: #a5a5a5;
+  color: black;
+}
+
+.equals {
+  background: #ff9500;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.zero {
+  grid-column: span 2;
+  border-radius: 35px;
+}
+
+@media (max-width: 400px) {
+  button {
+    height: 60px;
+    font-size: 1.2rem;
+  }
+
+  .result {
+    font-size: 2.5rem;
+  }
+}
