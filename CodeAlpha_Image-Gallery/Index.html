@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Portfolio - Dark Theme</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="antialiased">
 
     <!-- Animated Background -->
     <ul class="animated-bg">
-        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
     </ul>
 
     <!-- Header & Navigation -->
@@ -27,7 +37,10 @@
                 <a href="#contact" class="nav-link text-gray-300 hover:text-indigo-400 transition-colors">Contact</a>
             </div>
             <button id="mobile-menu-btn" class="md:hidden text-gray-300 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
             </button>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-700">
@@ -42,42 +55,62 @@
         <!-- Hero Section -->
         <section id="home" class="relative h-screen flex items-center justify-center text-white">
             <div class="absolute inset-0 bg-black opacity-60"></div>
-            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover">
-            <div class="relative z-10 text-center px-4">
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight drop-shadow-lg">Capturing the World's Beauty</h1>
-                <p class="mt-4 text-lg sm:text-xl max-w-2xl mx-auto drop-shadow-md">Explore a curated collection of moments frozen in time, from serene landscapes to vibrant city life.</p>
-                <a href="#gallery" class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">View Gallery</a>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop"
+                alt="Hero Background" class="home-image absolute inset-0 w-full h-full object-cover">
+            <div class="home-content relative z-10 text-center px-4">
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight drop-shadow-lg">Capturing the World's
+                    Beauty</h1>
+                <p class="mt-4 text-lg sm:text-xl max-w-2xl mx-auto drop-shadow-md">Explore a curated collection of
+                    moments frozen in time, from serene landscapes to vibrant city life.</p>
+                <a href="#gallery"
+                    class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">View
+                    Gallery</a>
             </div>
         </section>
 
         <!-- Gallery Section -->
         <section id="gallery" class="py-16 sm:py-24 bg-gray-900">
             <div class="container mx-auto px-4">
-                <header class="text-center mb-12">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Our Collection</h2>
-                    <p class="mt-2 text-lg text-gray-400">Filter by category to find what you're looking for.</p>
+                <header class="text-left mb-8">
+                    <h2 class="Sub-heading sm:text-4xl font-bold text-white tracking-tight">Our Collection</h2>
+                    
                 </header>
-                <div id="filter-container" class="flex justify-center flex-wrap gap-2 sm:gap-4 mb-8">
-                    <button class="filter-btn active px-4 py-2 text-sm sm:text-base font-semibold rounded-full bg-gray-800 text-white border border-gray-700 hover:bg-gray-700" data-filter="all">All</button>
-                    <button class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-full bg-gray-800 text-white border border-gray-700 hover:bg-gray-700" data-filter="nature">Nature</button>
-                    <button class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-full bg-gray-800 text-white border border-gray-700 hover:bg-gray-700" data-filter="city">Cityscapes</button>
-                    <button class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-full bg-gray-800 text-white border border-gray-700 hover:bg-gray-700" data-filter="animals">Animals</button>
+                <div id="filter-container" class="flex justify-start flex-wrap gap-2 sm:gap-4 mb-8">
+                    <button
+                        class="filter-btn active px-4 py-2 text-sm sm:text-base font-semibold rounded-full bg-gray-800 text-white border border-gray-700 hover:bg-gray-700"
+                        data-filter="all">All</button>
+                    <button
+                        class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-full bg-gray-800 text-white border border-gray-700 hover:bg-gray-700"
+                        data-filter="nature">Nature</button>
+                    <button
+                        class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-full bg-gray-800 text-white border border-gray-700 hover:bg-gray-700"
+                        data-filter="city">Cityscapes</button>
+                    <button
+                        class="filter-btn px-4 py-2 text-sm sm:text-base font-semibold rounded-full bg-gray-800 text-white border border-gray-700 hover:bg-gray-700"
+                        data-filter="animals">Animals</button>
                 </div>
-                <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                <div id="gallery-grid"
+                    class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
                     <!-- Images will be dynamically inserted here by JavaScript -->
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-16 sm:py-24 bg-gray-800">
-            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1520078431353-f079c1c13be8?q=80&w=1974&auto=format&fit=crop" alt="Photographer" class="rounded-lg shadow-2xl w-full">
+        <section id="about" class="py-16 px-[150px] sm:py-24 bg-gray-800">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-start gap-12">
+                <div class="md:w-1/4">
+                    <img src=https://images.unsplash.com/photo-1495366691023-cc4eadcc2d7e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fHBob3RvZ3JhcGhlcnxlbnwwfHwwfHx8MA%3D%3D
+                        alt="Photographer" class="rounded-lg shadow-2xl object-cover h-full">
                 </div>
-                <div class="md:w-1/2 text-center md:text-left">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">About Me</h2>
-                    <p class="mt-4 text-lg text-gray-300">I'm a passionate photographer with a love for adventure and storytelling. My goal is to capture the essence of every moment.</p>
+                <div class="md:w-3/4 md:text-left">
+                    <h2 class="Sub-heading mb-[50px] text-3xl sm:text-4xl font-bold text-white tracking-tight">About Me</h2>
+                    <p class="mt-4 text-lg  text-gray-300"><span class="block">Welcome to PhotoFolio.</span>
+                        <span class="block mb-2">We create a place to enjoy and share beautiful images from around the world.</span>
+
+                        <span class="block">Our gallery is about capturing moments, telling stories, and inspiring creativity.</span>
+                        <span class="block mb-2">Whether you’re here to explore, find ideas, or simply enjoy art, there’s always something new to see.</span>
+                    </p>
                 </div>
             </div>
         </section>
@@ -86,8 +119,10 @@
         <section id="contact" class="py-16 sm:py-24 bg-gray-900">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Get In Touch</h2>
-                <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Have a question or a project in mind? Reach out and let's create something beautiful together.</p>
-                <a href="mailto:hello@photofolio.com" class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">hello@photofolio.com</a>
+                <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">Have a question or a project in mind? Reach out
+                    and let's create something beautiful together.</p>
+                <a href="mailto:hello@photofolio.com"
+                    class="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">hello@photofolio.com</a>
             </div>
         </section>
     </main>
@@ -100,16 +135,20 @@
     </footer>
 
     <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50">
+    <div id="lightbox"
+        class="lightbox hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50">
         <div class="relative w-full max-w-4xl max-h-full">
             <div class="lightbox-content bg-gray-900 rounded-lg shadow-2xl overflow-hidden border border-gray-700">
                 <img id="lightbox-img" src="" alt="Full-size view" class="w-full h-auto max-h-[85vh] object-contain">
                 <p id="lightbox-caption" class="text-center p-4 text-gray-300 bg-gray-800"></p>
             </div>
-            <button id="close-btn" class="absolute -top-4 -right-4 sm:top-0 sm:right-0 m-4 text-white bg-gray-800 bg-opacity-50 rounded-full p-2 hover:bg-opacity-75">
+            <button id="close-btn"
+                class="absolute -top-4 -right-4 sm:top-0 sm:right-0 m-4 text-white bg-gray-800 bg-opacity-50 rounded-full p-2 hover:bg-opacity-75">
                 ✕
             </button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
+
 </html>

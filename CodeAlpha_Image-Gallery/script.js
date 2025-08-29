@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
       caption: "A stunning view of a city skyline at night",
     },
     {
+      src: "https://images.unsplash.com/photo-1755877379664-2f809909cbec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "nature",
+      caption: "Sunset over a tranquil lake with mountains",
+    },
+    {
       src: "https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=2072&auto=format&fit=crop",
       category: "animals",
       caption: "A curious red fox in the snow",
